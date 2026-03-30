@@ -10,16 +10,5 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - name: Post comment
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '👋 Welcome to the repository!'
-            })
-
-
-            
+      - name: Run welcome check
+        run: echo "Workflow trigger successful"
