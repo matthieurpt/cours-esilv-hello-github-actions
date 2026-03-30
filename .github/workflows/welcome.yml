@@ -7,8 +7,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  welcome:
+  build:
+    name: Post welcome comment
     runs-on: ubuntu-latest
-    steps:
-      - name: Run welcome check
-        run: echo "Workflow trigger successful"
